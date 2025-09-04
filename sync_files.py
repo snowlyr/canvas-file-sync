@@ -11,7 +11,7 @@ HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs(FILE_PATH, exist_ok=True)
 logger = Logger(os.path.join(FILE_PATH,LOG_FILENAME))
 logger.info(f"========== Start syncing files for {COURSE_CODES} ==========", alert=True)
-
+logger.info(f"========== At file dir: {FILE_PATH} ==========", alert=True)
 def fetch_all(url) -> dict:
     """Fetch all paginated results from Canvas API."""
     results = []
